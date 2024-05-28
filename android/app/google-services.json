@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "316982976696",
+    "project_id": "power-campus-25c89",
+    "storage_bucket": "power-campus-25c89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316982976696:android:fea01e9677bdfbd71d944d",
+        "android_client_info": {
+          "package_name": "com.example.power_campus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLztUQUuOTMvzEWrqMN5xXBEYi1tap4EM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
