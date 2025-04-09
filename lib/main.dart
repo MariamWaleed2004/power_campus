@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:power_campus/widgets/add_course.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
-
 import 'package:power_campus/screens/tabs.dart';
 import 'package:power_campus/screens/auth.dart';
 import 'package:power_campus/screens/splash.dart';
+import 'package:power_campus/providers/add_remove_courses_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,16 +15,16 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(create: (_) => AddedCoursesProvider()),
-     ], 
-  child: const MyApp(),
-    )
-  );
+  runApp(MultiProvider(
+    providers: [ChangeNotifierProvider(create: (_) => AddedCoursesProvider())],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
